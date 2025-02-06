@@ -3,6 +3,17 @@
   const reviewTemplate = document.querySelector("#review-template");
   const reviewCon = document.querySelector("#review-con");
   const baseURL = "https://swapi.dev/api/";
+  let tl = gsap.timeline();
+
+  function intro() {
+    const introImg = document.querySelector("#intro-img");
+
+    tl.to(introImg, { scale: 0.6, duration: 3 }),
+      tl.to(introImg, { autoAlpha: 0, display: "none" }),
+      tl.from("#main-body", { autoAlpha: 0 });
+  }
+
+  intro();
 
   function getCharacters() {
     fetch(`${baseURL}people/`)
@@ -40,6 +51,7 @@
 
   function getRandomMovie(e) {
     reviewCon.innerHTML = ""; // Clear previous content
+    reviewCon.classList.add("spinner"); //displays a spinner while waiting for the API
     const movieURLs = JSON.parse(e.currentTarget.dataset.movies); // Get array of movie URLs
 
     if (movieURLs.length === 0) {
@@ -54,6 +66,10 @@
     fetch(randomMovieURL)
       .then((response) => response.json())
       .then((movie) => {
+        //remove the spinner
+        reviewCon.classList.remove("spinner");
+        reviewCon.innerHTML = "";
+
         const clone = reviewTemplate.content.cloneNode(true);
 
         const movieTitle = clone.querySelector(".movie-title");

@@ -10,12 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Liter&family=Open+Sans:ital@0;1&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <link href="css/grid.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <script defer src="js/main.js"></script>
   </head>
   <body>
+    <section class="grid-con">
+      <div id="intro-img" class="col-span-full">
+        <img src="images/star-wars-logo.svg" alt="Star Wars Logo" />
+      </div>
+    </section>
+
     <div id="main-body" class="grid-con">
+      <div id="logo" class="col-span-full">
+        <img src="./images/star-wars-logo.svg" alt="Star War logo" />
+      </div>
       <section class="col-span-full m-col-span-6">
         <h2>Choose Character</h2>
         <p>
@@ -40,5 +50,9 @@
         </template>
       </section>
     </div>
+
+    <footer>
+      <p>&copy; 2025 Star Wars Fan Page. All Rights Reserved.</p>
+    </footer>
   </body>
 </html>
