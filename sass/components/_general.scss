@@ -7,3 +7,33 @@ body {
   background-blend-mode: darken;
   color: white;
 }
+
+#intro-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  height: 200px;
+  background: url(../images/bouncing-squares.svg) center no-repeat;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 80px;
+    margin: 30px;
+  }
+}
+
+// Footer
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: white;
+}

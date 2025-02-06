@@ -4,12 +4,13 @@ body {
 
 p {
   margin-bottom: 20px;
+  margin-top: 10px;
   color: white;
 }
 
 h2 {
   font-family: "Liter", serif;
-  margin-top: 20px;
+  margin: 20px;
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 20px;
@@ -19,6 +20,7 @@ h2 {
 
 h3 {
   font-family: "Liter", serif;
+  margin: 20px;
   font-weight: 600;
   font-size: 18px;
   color: white;
@@ -40,7 +42,7 @@ p {
   justify-content: center;
   flex-wrap: wrap;
   flex: 1 0 40%;
-  margin: 2%;
+  margin: 5%;
   border: solid #861414;
   background-color: rgba(143, 20, 20, 0.3);
 }
@@ -51,7 +53,6 @@ p {
 }
 #character-box .characters a p {
   text-align: center;
-  font-weight: bold;
   margin-bottom: 5px;
 }
 #character-box .characters a img {
@@ -74,6 +75,34 @@ body {
   background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: darken;
+  color: white;
+}
+
+#intro-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  height: 200px;
+  background: url(../images/bouncing-squares.svg) center no-repeat;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+}
+#logo img {
+  height: 80px;
+  margin: 30px;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
   color: white;
 }
 
